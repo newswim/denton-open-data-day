@@ -9,7 +9,7 @@ let options = {}
 // Json-File configuration
 jsonf.spaces = 4
 
-// Ask for the server for a file or some data
+// 1. Ask for the server for a file or some data
 
 var data = {
   resource_id: '283f49d0-9e9a-4c5c-bb51-046b0a8a890c', // the resource id
@@ -17,25 +17,25 @@ var data = {
   // q: 'jones' // query for 'jones'
 };
 
-najax({
-  url: 'http://data.cityofdenton.com/api/action/datastore_search',
-  data: data,
-  dataType: 'jsonp',
-  success: function(data) {
-    jsonf.writeFile(file, data, function (err) {
-      console.error(err)
-    })
-  }
-});
-
-
-
-
-// Write that file to the /data folder
+// 2. Write that file to the /data folder
 /* https://www.npmjs.com/package/jsonfile#writefilefilename-obj-options-callback */
 // Takes an optional [replacer] parameter
 // -- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#The_replacer_parameter
 
+let successHandler = (data) => {
+  jsonf.writeFile(file, data, function (err) {
+    console.error(err)
+  })
+}
+
+// perform the query -- request will be a deferred (asyncronous) operation
+
+najax({
+  url: 'http://data.cityofdenton.com/api/action/datastore_search',
+  data: data,
+  dataType: 'jsonp',
+  success: successHandler
+});
 
 
-// Experiment with different kinds of analysis
+// 3. Experiment with different kinds of analysis
