@@ -1,0 +1,126 @@
+{
+    "help": "http://data.cityofdenton.com/api/3/action/help_show?name=datastore_search",
+    "success": true,
+    "result": {
+        "resource_id": "283f49d0-9e9a-4c5c-bb51-046b0a8a890c",
+        "fields": [
+            {
+                "type": "int4",
+                "id": "_id"
+            },
+            {
+                "type": "text",
+                "id": "FISCAL_YEAR"
+            },
+            {
+                "type": "numeric",
+                "id": "FUND"
+            },
+            {
+                "type": "text",
+                "id": "FUND_DESC"
+            },
+            {
+                "type": "numeric",
+                "id": "GBMCU"
+            },
+            {
+                "type": "text",
+                "id": "ACCOUNT_DESCRIPTION"
+            },
+            {
+                "type": "numeric",
+                "id": "GBOBJ"
+            },
+            {
+                "type": "text",
+                "id": "GMDL01"
+            },
+            {
+                "type": "text",
+                "id": "GBSUB"
+            },
+            {
+                "type": "numeric",
+                "id": "APPROVED"
+            },
+            {
+                "type": "numeric",
+                "id": "MODIFIED"
+            }
+        ],
+        "records": [
+            {
+                "GBMCU": "1000",
+                "GBSUB": "0026    ",
+                "GBOBJ": "2100",
+                "MODIFIED": "0",
+                "ACCOUNT_DESCRIPTION": "GENERALFUND-REVENUE                     ",
+                "FISCAL_YEAR": "2016-2017   ",
+                "FUND": "100",
+                "FUND_DESC": "GENERAL FUND                  ",
+                "GMDL01": "INDIGENT DEFENSE PAYABLE      ",
+                "_id": 1,
+                "APPROVED": "0"
+            },
+            {
+                "GBMCU": "1000",
+                "GBSUB": "        ",
+                "GBOBJ": "4001",
+                "MODIFIED": "0",
+                "ACCOUNT_DESCRIPTION": "GENERALFUND-REVENUE                     ",
+                "FISCAL_YEAR": "2016-2017   ",
+                "FUND": "100",
+                "FUND_DESC": "GENERAL FUND                  ",
+                "GMDL01": "REVENUE-TAXES                 ",
+                "_id": 2,
+                "APPROVED": "0"
+            },
+            {
+                "GBMCU": "1000",
+                "GBSUB": "        ",
+                "GBOBJ": "4004",
+                "MODIFIED": "-42506508",
+                "ACCOUNT_DESCRIPTION": "GENERALFUND-REVENUE                     ",
+                "FISCAL_YEAR": "2016-2017   ",
+                "FUND": "100",
+                "FUND_DESC": "GENERAL FUND                  ",
+                "GMDL01": "CURRENT AD VALOREM TAXES      ",
+                "_id": 3,
+                "APPROVED": "-42506508"
+            },
+            {
+                "GBMCU": "1000",
+                "GBSUB": "        ",
+                "GBOBJ": "4005",
+                "MODIFIED": "0",
+                "ACCOUNT_DESCRIPTION": "GENERALFUND-REVENUE                     ",
+                "FISCAL_YEAR": "2016-2017   ",
+                "FUND": "100",
+                "FUND_DESC": "GENERAL FUND                  ",
+                "GMDL01": "AD VALOREM REIMBURSEMENTS     ",
+                "_id": 4,
+                "APPROVED": "0"
+            },
+            {
+                "GBMCU": "1000",
+                "GBSUB": "0001    ",
+                "GBOBJ": "4005",
+                "MODIFIED": "0",
+                "ACCOUNT_DESCRIPTION": "GENERALFUND-REVENUE                     ",
+                "FISCAL_YEAR": "2016-2017   ",
+                "FUND": "100",
+                "FUND_DESC": "GENERAL FUND                  ",
+                "GMDL01": "SALLY BEAUTY SUPPLY           ",
+                "_id": 5,
+                "APPROVED": "0"
+            }
+        ],
+        "_links": {
+            "start": "/api/action/datastore_search?limit=5&resource_id=283f49d0-9e9a-4c5c-bb51-046b0a8a890c",
+            "next": "/api/action/datastore_search?offset=5&limit=5&resource_id=283f49d0-9e9a-4c5c-bb51-046b0a8a890c"
+        },
+        "limit": 5,
+        "total": 45618
+    }
+}
