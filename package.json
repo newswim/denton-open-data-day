@@ -26,7 +26,10 @@
   },
   "homepage": "https://github.com/newswim/denton-open-data-day#readme",
   "dependencies": {
+    "json2xls": "^0.1.2",
     "jsonfile": "^2.4.0",
-    "najax": "^1.0.0"
+    "lodash": "^4.17.4",
+    "najax": "^1.0.0",
+    "node-fetch": "^1.6.3"
   }
 }
