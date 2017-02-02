@@ -1,16 +1,14 @@
-// typically we import libraries first
 const fetch = require('node-fetch')
 const jsonf = require('jsonfile')
 const all_datastores = require('../data/all_datastores').all_datastores.result
 
-// const url = 'http://data.cityofdenton.com/'
+const baseUrl = 'http://data.cityofdenton.com/'
 const url = 'http://data.cityofdenton.com/api/3/action/package_show?id='
 const package_list_endpoint = 'api/3/action/package_list'
 const test_package_endpoint = 'alt-development-plan'
 
 let json_bank = '../data/issue_data.json'
-
-var accum = []
+let accum = []
 
 var arr = all_datastores.forEach(name => {
   return fetch(url + name)
@@ -32,7 +30,6 @@ var arr = all_datastores.forEach(name => {
     return obj
   })
   .then(obj => accum.push(obj))
-  // .then(() => console.log(accum))
   .catch(err => console.log(err.message))
 })
 
