@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/newswim/denton-open-data-day#readme",
   "dependencies": {
+    "d3": "^4.5.0",
     "json2xls": "^0.1.2",
     "jsonfile": "^2.4.0",
     "lodash": "^4.17.4",

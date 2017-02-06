@@ -1,6 +1,7 @@
 const fetch = require('node-fetch')
 const jsonf = require('jsonfile')
 const all_datastores = require('../data/all_datastores').all_datastores.result
+const create_xls = require('./create_xls').create_xls
 
 const baseUrl = 'http://data.cityofdenton.com/'
 const url = 'http://data.cityofdenton.com/api/3/action/package_show?id='
@@ -35,7 +36,8 @@ let performFetch = all_datastores.map(fetchMetaData)
 let results = Promise.all(performFetch)
 
   // should return an array as a result of calling map
-results.then((data) => jsonf.writeFile(json_bank, data, (err) => console.error(err)))
+// results.then((data) => jsonf.writeFile(json_bank, data, (err) => console.error(err)))
+results.then((data) => create_xls(data, '../data/datasets.xls'))
   // .then(data => console.log(data))
   .catch(err => console.log(err.message))
 
